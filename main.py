@@ -25,7 +25,7 @@ for preLink in linksToFullPage:
     print(fullLink + download__resolutions.contents[0].contents[2]['href'])
     
 for l in linksToDownload:
-    with open('wallpapers/' + ''.join(random.choice(dict) for _ in range(12)) + '.jpg', 'wb') as wallpaper: #creates a file with a random name
+    with open(''.join(random.choice(dict) for _ in range(12)) + '.jpg', 'wb') as wallpaper: #creates a file with a random name
         wallpaper.write(requests.get(l).content)
         print('Done °^° with {0}'.format(l))
 
